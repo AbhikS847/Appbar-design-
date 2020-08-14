@@ -21,8 +21,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-              <Navbar/>
-              <div className="displaySide">
+          <Row>
+            <Col className="d-none d-lg-block" sm={0}>
+              <Navbar />
+            </Col>
+            <Col className="d-none d-lg-block" sm={10}>
               <Route path="/products" exact component={Products} />
               <Route path="/orders" exact component={Orders} />
               <Route path="/today" exact component={Today} />
@@ -33,9 +36,30 @@ class App extends React.Component {
               <Route path="/order/edit" exact component={EditOrder} />
               <Route path="/customers" exact component={Customers} />
               <Route path="/customers/add" exact component={AddCustomer} />
-              </div>
+              <Route path="/customers/edit/:id" exact component={EditCustomer} />
+            </Col>
+            <div className="combiner">
+            <div className="d-block d-sm-block d-lg-none">
+              <Navbar />
+            </div>
+            <div className="d-block d-sm-block d-lg-none">
+            <Route path="/products" exact component={Products} />
+              <Route path="/orders" exact component={Orders} />
+              <Route path="/today" exact component={Today} />
+              <Route path="/" exact component={Production} />
+              <Route path="/product/new" exact component={AddProduct} />
+              <Route path="/order/add" exact component={AddOrder} />
+              <Route path="/order/search" exact component={SearchOrder} />
+              <Route path="/order/edit" exact component={EditOrder} />
+              <Route path="/customers" exact component={Customers} />
+              <Route path="/customers/add" exact component={AddCustomer} />
+              <Route path="/customers/edit/:id" exact component={EditCustomer} />  
+            </div>
+            </div>
+          </Row>
         </Router>
       </div>
+
     );
   }
 }

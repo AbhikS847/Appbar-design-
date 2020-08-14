@@ -27,8 +27,8 @@ body{
     padding: 0px 30px;
 }
 
-#displaySide{
-    margin:0px 0px 10px;
+.displaySide{
+    margin-left: 100px;
 }
 
 .rule {
@@ -46,17 +46,7 @@ body{
     margin-top: 30px;
     color: #a5a9ac;
 }
-.displaySide{
-    margin-left: 100px;
-}
 
-.sidenav---sidenav---_2tBP {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1006;
-    min-width: 64px;
-    background-color:#434D54;
-    transition: min-width 0.2s;
+.combiner{
+    display: inline-flex;
 }
